@@ -1,3 +1,4 @@
+
 <div class="row" style="margin-top: 150px;">
   <div class="col-md-12">
     <h3 class="text-center text-secondary">Resultados da busca "{{nomeProcurado}}"</h3>
@@ -16,13 +17,11 @@
           <div class="produtos-stars">
             <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width: 100px" />
           </div>
-          <strong class="produtos-preco">R$ {{ item.preco }}</strong>
+          <strong class="produtos-preco">R$ {{ item.preco | currency: 'BRL'}}</strong>
         </div>
         <div class="card flip-card-back align align-items-center">
           <h2>{{ item.nome }}</h2>
-
-          
-          <button (click)="mostrarProduto(item)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
+          <button (click)="mostrarProduto(item)" type="button" class="btn btn-light mt-5 mb-3 btn-cadastro "
             data-toggle="modal" data-target="#ExemploModalCentralizado">
             Mais Informações
           </button>
@@ -30,8 +29,6 @@
           <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(item)">
             Adicionar ao Carrinho
           </button>
-      
-
         </div>
       </div>
     </div>

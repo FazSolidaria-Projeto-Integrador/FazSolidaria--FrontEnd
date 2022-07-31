@@ -13,6 +13,13 @@ body {
     background-color: #FCF2B8;
 }
 
+
+@media screen and (max-width: 768px) {
+    .resp {
+        display: none !important;
+    }
+}
+
 /* navbar2 */
 .nav2 {
     position: fixed;

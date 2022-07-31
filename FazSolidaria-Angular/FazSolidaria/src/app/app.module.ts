@@ -34,6 +34,13 @@ import { HistoricoComprasComponent } from './historico-compras/historico-compras
 import { CheckoutComponent } from './checkout/checkout.component';
 import { BuscaProdutoComponent } from './busca-produto/busca-produto.component';
 
+// IMPORTS -> Configuração para "." por "," -> moeda BRL
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+// Configuração para "." por "," -> moeda BRL
+registerLocaleData(ptBr);
+
 
 @NgModule({
   declarations: [
@@ -77,7 +84,11 @@ import { BuscaProdutoComponent } from './busca-produto/busca-produto.component';
     // faz com que o angular nao ser perca nas rota, durante esse vai e vem, evita o erro 404
     provide: LocationStrategy,
     useClass: HashLocationStrategy,
-  }],
+    
+  },
+  // Configuração para "." por "," -> moeda BRL
+  { provide: LOCALE_ID, useValue: 'pt' },
+],
   bootstrap: [AppComponent]
 
 })

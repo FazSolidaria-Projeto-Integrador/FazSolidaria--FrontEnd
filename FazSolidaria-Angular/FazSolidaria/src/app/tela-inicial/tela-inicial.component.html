@@ -1,8 +1,12 @@
 <app-menu-compras></app-menu-compras>
-<div class="container-justify">
+<div class="container-justify" id="carousel-tela-inicial">
   <div class="row">
-    <!-- carrossel -->
     <div class="col-md-12">
+      <!-- IMAGEM -->
+      <!-- <div class="dimcar d-md-none" style="margin-top: 90px; width:500px ; heigth:500px ;" id="imgInicial">
+        <img src="../../assets/img/PAG1/CARROSSEL/tela1.png" class="d-block w-100" alt="...">
+      </div> -->
+
       <!-- carrossel -->
       <div id="carouselExampleInterval" class="carousel slide dimcar" data-ride="carousel">
         <div class="carousel-inner">
@@ -60,7 +64,7 @@
 <!-- Catalogo de Produtos -->
 
 <!--Textos -->
-<div class="col-xl-12 text-center mt-5">
+<div class="col-xl-12 text-center mt-5 resp">
   <h2 class="fonteTituloTxt" style="color: black">Confira os Produtos</h2>
   <p class="text-muted fonteTxt">
     Nossos produtos são frescos! Fazemos a colheita poucos momentos antes do envio, garantindo assim frutos, legumes e
@@ -83,18 +87,19 @@
               <h4 class="card-title font-produtos mt-2">{{ produto.nome }}</h4>
               <div class="produtos-stars">
                 <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width: 100px" />
-              </div><strong class="produtos-preco">R$ {{ produto.preco }}</strong>
+              </div><strong class="produtos-preco"> {{ produto.preco | currency: 'BRL'}}</strong>
             </div>
             <div class="card flip-card-back align align-items-center">
               <h2>{{ produto.nome }}</h2>
 
-              <div  style="margin-top: 80px;" >
-              <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
-                Adicionar ao Carrinho
-              </button>
-              <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
-                data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">Mais
-                informações</button>
+              <div style="margin-top: 80px; display: grid;">
+                <button type="button" class="btn btn-light botao" style="width: 160px"
+                  (click)="adicionarCarrinho(produto)">
+                  Adicionar ao Carrinho
+                </button>
+                <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
+                  data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">Mais
+                  informações</button>
               </div>
             </div>
           </div>
@@ -118,16 +123,16 @@
               <div class="produtos-stars">
                 <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width: 100px" />
               </div>
-              <strong class="produtos-preco">R$ {{ produto.preco }}</strong>
+              <strong class="produtos-preco"> {{ produto.preco | currency: 'BRL' }}</strong>
             </div>
             <div class="card flip-card-back align align-items-center">
               <h2>{{ produto.nome }}</h2>
-              <div style="margin-top: 80px;" >
-              <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
-                Adicionar ao Carrinho</button>
-              <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
-                data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">Mais
-                informações</button>
+              <div style="margin-top: 80px; display: grid;">
+                <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
+                  Adicionar ao Carrinho</button>
+                <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
+                  data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">Mais
+                  informações</button>
               </div>
             </div>
           </div>
@@ -150,18 +155,18 @@
               <h4 class="card-title font-produtos">{{ produto.nome }}</h4>
               <div class="produtos-stars">
                 <img src="../../assets/img/stars.jpg" class="mx-auto d-block" style="width: 100px" />
-              </div><strong class="produtos-preco">R$ {{ produto.preco }}</strong>
+              </div><strong class="produtos-preco"> {{ produto.preco | currency: 'BRL' }}</strong>
             </div>
             <div class="card flip-card-back align align-items-center">
               <h2>{{ produto.nome }}</h2>
-              <div style="margin-top: 80px;" >
-              <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
-                Adicionar ao Carrinho</button>
-              <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
-                data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">
-                Mais informações
-              </button>
-            </div>
+              <div style="margin-top: 80px; display: grid;">
+                <button type="button" class="btn btn-light" style="width: 160px" (click)="adicionarCarrinho(produto)">
+                  Adicionar ao Carrinho</button>
+                <button (click)="mostrarProduto(produto)" type="button" class="btn btn-light mt-2 mb-3 btn-cadastro"
+                  data-toggle="modal" data-dismiss="modal" data-target="#ExemploModalCentralizado">
+                  Mais informações
+                </button>
+              </div>
             </div>
           </div>
         </div>

@@ -8,5 +8,9 @@ export const environment = {
   senha:"",
   usuario:"",
   categoria: '',
-  carrinho: [0]
+  carrinho: [0],
+  url: "https://fazsolidaria.herokuapp.com"
+
 };
+
+

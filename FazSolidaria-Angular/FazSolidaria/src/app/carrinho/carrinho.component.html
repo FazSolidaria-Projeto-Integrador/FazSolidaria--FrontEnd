@@ -24,7 +24,7 @@
           <label class="d-md-none">Nome</label> {{ produto.nome }}
         </div>
         <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
-          <label class="d-md-none">Preço</label>R$ {{ produto.preco }}
+          <label class="d-md-none">Preço</label> {{ produto.preco | currency: 'BRL' }}
         </div>
         <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
           <label class="d-md-none">Qtd</label>

@@ -13,6 +13,8 @@ body {
     background-color: #FCF2B8;
 }
 
+
+
 /* navbar2 */
 .nav2 {
     position: fixed;
@@ -88,6 +90,7 @@ body {
     margin-right: 0;
     border-radius: 25px 0px 25px 0px;
 }
+
 /* fonte do nome da marca */
 .fonteTitulo {
     font-family: 'Amatic SC', cursive;
@@ -307,6 +310,50 @@ body {
         right: 7.5rem;
         top: .3125rem
     }
+
+    /* Personalizacao do valor do carrinho */
+    .cart_value {
+        position: absolute;
+        top: 17px;
+        right: 168px;
+        background: #FFF;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        padding: 2px 10px;
+        color: black;
+        font-weight: 800;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .navbar-collapse.collapse.show>ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .fa.fa.fa-search {
+        display: none;
+    }
+
+    .navbar-collapse.collapse.show>span {
+        display: unset;
+    }
+
+    .cart_value {
+        top: 17px;
+        right: 168px;
+        background: #FFF;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        padding: 2px 10px;
+        color: black;
+        font-weight: 800;
+        font-size: 15px;
+        text-align: center;
+    }
+
 }
 
 /* Alinha o texto */
@@ -476,19 +523,8 @@ footer ul li.ellipsis {
 
 }
 
-/* Personalizacao do valor do carrinho */
-.cart_value{
-    position: absolute;
-    top: 17px;
-    right: 168px;
-    background: #FFF;
-    border: 1px solid #ccc;
-    border-radius: 50%;
-    padding: 2px 10px;
-    color: black;
-    font-weight: 800;
-    font-size: 15px;
-}
+
+
 /* span.cart_value{
     top: 0;
 }
@@ -538,7 +574,7 @@ dropdown-menu[_ngcontent-dbh-c72] {
 }
 
 /* Configuração do icone do menu usuario */
-.img1{
+.img1 {
     display: flex;
     text-decoration: none;
     width: auto;

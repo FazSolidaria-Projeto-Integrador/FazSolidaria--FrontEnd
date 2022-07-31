@@ -134,17 +134,13 @@
           <label class="d-md-none">Nome</label> {{ produto.nome }}
         </div>
         <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
-          <label class="d-md-none">Preço</label>R$ {{ produto.preco }}
+          <label class="d-md-none">Preço</label> {{ produto.preco | currency: 'BRL'}}
         </div>
         <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
-          <label class="d-md-none justify-content-center">Qtd</label>
-          <div class="d-flex quantidade-carrinho ">
-            <input type="text" class="col-4  m-0 form-control text-center" style="width: 5px;" placeholder="0"
-              aria-label="button addon" value="{{produto.qtd}}" aria-describedby="button-addon">
-          </div>
+          <label class="d-md-none ">Qtd</label> {{produto.qtd}}  
         </div>
-        <div class="col-12 col-md-2 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
-          <label class="d-md-none">Sub-total</label> {{ calculaSubTotal(produto.preco,produto.qtd) }}
+        <div class="col-12 col-md-3 d-flex d-md-block justify-content-between align-items-center  p-2  text-center">
+          <label class="d-md-none">Sub-total</label> {{ calculaSubTotal(produto.preco,produto.qtd) | currency: 'BRL'}}
         </div>
       </div>
     </div>

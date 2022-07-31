@@ -22,7 +22,7 @@ export class CkeckoutService {
 
   placeOrder(purchase: Purchase): Observable<any> {
     return this.http.post<GetResponsePurchase>(
-      'http://localhost:8080/api/checkout/purchase', purchase,
+      `${environment.url}/api/checkout/purchase`, purchase,
       {
         headers: new HttpHeaders().set('Authorization', environment.token)
       }

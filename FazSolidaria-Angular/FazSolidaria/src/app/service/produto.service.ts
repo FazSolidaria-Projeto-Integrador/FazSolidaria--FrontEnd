@@ -22,32 +22,32 @@ export class ProdutoService {
   }
 
   mostrarProdutosCadastrados(): Observable<Produto[]>{
-  return this.http.get<Produto[]>('http://localhost:8080/produtos') 
+  return this.http.get<Produto[]>(`${environment.url}/produtos`) 
   }
 
 
   buscarPeloIdProduto(id:number): Observable<Produto>{
-  return this.http.get<Produto>(`http://localhost:8080/produtos/buscar-id-produto/${id}`)
+  return this.http.get<Produto>(`${environment.url}/produtos/buscar-id-produto/${id}`)
   }
 
   buscarPeloNomeProduto(nome: String): Observable<Produto[]> {
     return this.http.get<Produto[]>(
-      `http://localhost:8080/produtos/nome/${nome}`
+      `${environment.url}/produtos/nome/${nome}`
     );
   }
 
   cadastrarProduto(produto:Produto): Observable<Produto>{
-    return this.http.post<Produto>('http://localhost:8080/produtos/cadastrar-produto', produto, {headers: new HttpHeaders().set('Authorization', environment.token)
-    });
+    return this.http.post<Produto>(`${environment.url}/produtos/cadastrar-produto`, produto, {headers: new HttpHeaders().set('Authorization', environment.token)
+  });
   }
 
   atualizarCadastroProduto(produto:Produto): Observable<Produto>{
-    return this.http.put<Produto>('http://localhost:8080/produtos/atualizar-produto', produto, {headers: new HttpHeaders().set('Authorization', environment.token)
+    return this.http.put<Produto>(`${environment.url}/produtos/atualizar-produto`, produto, {headers: new HttpHeaders().set('Authorization', environment.token)
   });
   }
 
   deletarProduto(id:number){
-    return this.http.delete(`http://localhost:8080/produtos/deletar-id-produto/${id}`, {headers: new HttpHeaders().set('Authorization', environment.token)
+    return this.http.delete(`${environment.url}/produtos/deletar-id-produto/${id}`, {headers: new HttpHeaders().set('Authorization', environment.token)
   });
   }
 }
